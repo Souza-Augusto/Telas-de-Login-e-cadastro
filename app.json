@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "tela_login",
+    "slug": "tela_login",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "tela_login"
+}
