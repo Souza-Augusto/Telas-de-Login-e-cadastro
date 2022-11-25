@@ -12,24 +12,16 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { user, signIn, saveUser, setLoading, setAuthToken, authToken } =
-    useContext(AuthContext);
+  const { user, signIn, saveUser, setLoading } = useContext(AuthContext);
 
   const navigation = useNavigation();
 
-  const userData = {
-    user: {
-      name: "Steve Jobs",
-      email: "email@email.com",
-      password: "Senha@@0",
-    },
-  };
-
   async function login() {
     setLoading(true);
-    if (email === userData.user.email && password === userData.user.password) {
-      saveUser(userData.user);
-      signIn("token232132321");
+    const response = await Api.SignIn();
+    if (email === response.user.email && password === response.user.password) {
+      saveUser(response.user);
+      signIn(response.token);
       setLoading(false);
       return;
     }

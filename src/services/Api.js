@@ -13,28 +13,17 @@ export function SignUp(name, email, password) {
   });
 }
 
-const SignIn = {
-  token: "tokençjfljsdfsdfjidfisfisdioofmk",
-  user: {
-    name: "Steve Jobs",
-    email: "email@email.com",
-    password: "Senha@@0",
-  },
-};
-
-export default SignIn;
-
-// export function SignIn() {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve({
-//         token: "tokençjfljsdfsdfjidfisfisdioofmk",
-//         user: {
-//           name: "Steve Jobs",
-//           email: "email@email.com",
-//           password: "Senha@@0",
-//         },
-//       });
-//     }, 2000);
-//   });
-// }
+export function SignIn() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        token: "tokençjfljsdfsdfjidfisfisdioofmk",
+        user: {
+          name: "Steve Jobs",
+          email: "email@email.com",
+          password: "Senha@@0",
+        },
+      });
+    }, 2000);
+  });
+}
